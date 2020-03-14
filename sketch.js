@@ -40,7 +40,6 @@ function setup(){
 
     myself = new Myself(200,50);
 
-    //log6 = new Log(230,180,80, PI/2);
     slingshot = new SlingShot(myself.body,{x:200, y:50});
 }
 
@@ -72,7 +71,6 @@ function draw(){
 
     myself.display();
     platform.display();
-    //log6.display();
     slingshot.display();    
 }
 
@@ -86,12 +84,6 @@ function mouseDragged(){
 function mouseReleased(){
     slingshot.fly();
     gameState = "launched";
-}
-
-function keyPressed(){
-    if(keyCode === 32){
-       // slingshot.attach(bird.body);
-    }
 }
 
 async function getBackgroundImg(){
